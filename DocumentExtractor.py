@@ -359,7 +359,7 @@ class DocumentExtractor(object):
 
         return possible_author_name, possible_author_comp, all_companies
 
-    def get_target_price_and_recommendation(self, pdf_path) -> Union[List[dict],
+    def get_target_price_and_recommendation(self, pdf_path: str) -> Union[List[dict],
                                                                      List[str],
                                                                      List[str]]:
         """Searches for a Target Price/ Recommendations in a Document (Financial Doc)
@@ -453,7 +453,7 @@ class DocumentExtractor(object):
             Does a Reg-Exp search to obtain the Target Price
 
         Args:
-            PDF_file (str): The full path to the PDF Document
+            text (str): Text to Extract Target Prices from
 
         Returns:
             price_filtered[0] (str): The Target Price
@@ -482,7 +482,7 @@ class DocumentExtractor(object):
             word that matches any of the words in <recommendation_tags> below
 
         Args:
-            PDF_file (str): The full path to the PDF Document
+            text (str): Text to Extract Recommendations from
 
         Returns:
             reco_list (List[str]): The Recommendations
