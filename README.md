@@ -36,7 +36,7 @@ Implements the DocumentExtractor() class which provides functionality to process
         - **Overview:**
             Searches for a Target Price/ Recommendations in a Document (Financial Doc) through Reg-Ex based search
         - **Issues:**
-            Depends on the Target Price/ Recommendation Info. being in the vicinity of text *"Target Price"* or *Price Target*
+            Depends on the Target Price/ Recommendation Info. being in the vicinity of text *"Target Price"* or *"Price Target"*
     
 ### Files - main . py
 Processes PDFs in the folder */needle_pdf_docs* and saves the Processed Info at */Results*.
