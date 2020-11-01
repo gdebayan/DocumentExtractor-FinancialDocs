@@ -30,13 +30,13 @@ Implements the DocumentExtractor() class which provides functionality to process
             -   As Spacy's default Named Entity Recognition (NER) does not work well for Person's Name (Indian Person), this method is an alternate approach to finding a Person's name from a document.
             -   
         - **Issues**
-            - If the doocument does not have text in the format <Author Name *...... txt ...* Author mail>, results will be inaccurate
+            - If the document does not have text in the format <Author Name *...... txt ...* Author mail>, results will be inaccurate
     
   - ***get_target_price_and_recommendation()***
         - **Overview:**
             Searches for a Target Price/ Recommendations in a Document (Financial Doc) through Reg-Ex based search
         - **Issues:**
-            Depends on the Target Price/ Recommendation Info. being in the vicinity of text *"Target Price"* and *Price Target*
+            Depends on the Target Price/ Recommendation Info. being in the vicinity of text *"Target Price"* or *Price Target*
     
 ### Files - main . py
 Processes PDFs in the folder */needle_pdf_docs* and saves the Processed Info at */Results*.
