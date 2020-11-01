@@ -3,7 +3,7 @@
 Extracting Fields of Interest like Author Name/ Affiliation, Stock Target Price, Recommendations etc. from Financial Documents.
 
   - Extracts Author Name (Person), Company Author Name (Company that wrote the Document), All Companies mentioned in the document throgh SPACY's Named Entity Recognition (NER) module.
-  - Extracts Author Name (Person), by doing a Reg-Exp search of Text around valid E-Mail IDs.
+  - Extracts Author Name (Person), by doing a Reg-Exp search of Text around valid E-Mail IDs (Uses Spacy's Parts of Speech Tagging (POS Tagging) module as well.
   - Extracts Stock Target Price/ Stock Recommendation (Buy, Sell, etc.) using Reg-Exp search.
 
 ### Files - DocumentExtractor . py
