@@ -3,7 +3,7 @@
 Extracting Fields of Interest like Author Name/ Affiliation, Stock Target Price, Recommendations etc. from Financial Documents.
 
   - Extracts Author Name (Person), Company Author Name (Company that wrote the Document), All Companies mentioned in the document throgh SPACY's Named Entity Recognition (NER) module.
-  - Extracts Author Name (Person), by doing a Reg-Exp search of Text around valid E-Mail IDs (Uses Spacy's Parts of Speech Tagging (POS Tagging) module as well.
+  - Extracts Author Name (Person), by doing a Reg-Exp search of Text around valid E-Mail IDs. Uses Spacy's Parts of Speech Tagging (POS Tagging) module as well.
   - Extracts Stock Target Price/ Stock Recommendation (Buy, Sell, etc.) using Reg-Exp search.
 
 ### Files - DocumentExtractor . py
@@ -25,11 +25,11 @@ Implements the DocumentExtractor() class which provides functionality to process
             **TO DO:** Retrain Scapy's NER module with Default Model Train Data (On which Spacy's default English model was trained on) + New Indian Names Train data to avoid the “Catastropic Forgetting Problem”. Reference: https://explosion.ai/blog/pseudo-rehearsal-catastrophic-forgetting
             
   - ***extract_name_around_email()***
-        - **Overview**
+        - **Overview:**
             - Extracts Names of Person's around an Email-Id in a Document through Reg-exp based search and Scapy's Part's of Speech Tagging (POS) module.
             -   As Spacy's default Named Entity Recognition (NER) does not work well for Person's Name (Indian Person), this method is an alternate approach to finding a Person's name from a document.
             -   
-        - **Issues**
+        - **Issues:**
             - If the document does not have text in the format <Author Name *...... txt ...* Author mail>, results will be inaccurate
     
   - ***get_target_price_and_recommendation()***
