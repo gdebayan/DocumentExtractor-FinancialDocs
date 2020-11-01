@@ -24,14 +24,15 @@ Implements the DocumentExtractor() class which provides functionality to process
         
             **TO DO:** Retrain Scapy's NER module with Default Model Train Data (On which Spacy's default English model was trained on) + New Indian Names Train data to avoid the “Catastropic Forgetting Problem”. Reference: https://explosion.ai/blog/pseudo-rehearsal-catastrophic-forgetting
             
-   - ***extract_name_around_email()***
+  - ***extract_name_around_email()***
         - **Overview**
             - Extracts Names of Person's around an Email-Id in a Document through Reg-exp based search and Scapy's Part's of Speech Tagging (POS) module.
             -   As Spacy's default Named Entity Recognition (NER) does not work well for Person's Name (Indian Person), this method is an alternate approach to finding a Person's name from a document.
             -   
         - **Issues**
             - If the doocument does not have text in the format <Author Name *...... txt ...* Author mail>, results will be inaccurate
-    - ***get_target_price_and_recommendation()***
+    
+  - ***get_target_price_and_recommendation()***
         - **Overview:**
             Searches for a Target Price/ Recommendations in a Document (Financial Doc) through Reg-Ex based search
         - **Issues:**
