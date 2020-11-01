@@ -61,15 +61,15 @@ spacy --- 2.3.2
 ### Example Use
 
 ```sh
-from DocumentExtractor import DocumentExtractor
+[CODE]: from DocumentExtractor import DocumentExtractor
 
-obj = DocumentExtractor()
+[CODE]: obj = DocumentExtractor()
 
-obj.train_entity_ruler()
+[CODE]: obj.train_entity_ruler()
 
-pdf_file = "C:/Users/62871/Desktop/Deb_Learn/needle_ai/pdf_docs/[Kotak]_576.pdf"
+[CODE]: pdf_file = "C:/Users/62871/Desktop/Deb_Learn/needle_ai/pdf_docs/[Kotak]_576.pdf"
 
-author_name, author_company, all_company = obj.extract_name_and_org_from_pdf(pdf_file)
+[CODE]: author_name, author_company, all_company = obj.extract_name_and_org_from_pdf(pdf_file)
 
 In[9]: author_name
 Out[9]: 
@@ -96,7 +96,9 @@ Out[11]:
  'the monetary authority', .......]
  
  
-In[13]:  email_names = obj.extract_name_around_email(pdf_file)
+[CODE]: email_names = obj.extract_name_around_email(pdf_file)
+
+In[13]: email_names
 Out[13]: 
 ['kotak institutional equities research',
  'rohit chordia',
@@ -107,8 +109,8 @@ Out[13]:
  'compliance officer',
  'mr. kamlesh rao']
  
- 
- price_reco_mapping, all_prices, all_reco = obj.get_target_price_and_recommendation(pdf_file)
+
+[CODE]: price_reco_mapping, all_prices, all_reco = obj.get_target_price_and_recommendation(pdf_file)
  
 In[21]: all_prices
 Out[21]: ['105', '1,050', '201']
